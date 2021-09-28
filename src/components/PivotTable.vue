@@ -1,5 +1,5 @@
 <template>
-  <div class="position-relative">
+  <table class="q-table">
     <template v-if="isDataLoading">
       <slot name="loading">
         Loading...
@@ -212,7 +212,7 @@
           </tfoot>
       </template>
     </template>
-  </div>
+  </table>
 </template>
 
 <script>
