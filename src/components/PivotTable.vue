@@ -20,9 +20,7 @@
         {{ noDataWarningText }}
       </div>
 
-      <div v-else-if="cols.length && rows.length" class="table-responsive">
-        <table class="table table-bordered" :aria-busy="isDataLoading || isDataComputing">
-
+      <template v-else-if="cols.length && rows.length">
           <!-- Table header -->
           <thead>
             <template v-for="({ colField, cols }, colFieldIndex) in tableHeader.colHeaderFields">
@@ -212,8 +210,7 @@
               </tr>
             </template>
           </tfoot>
-        </table>
-      </div>
+      </template>
     </template>
   </div>
 </template>
